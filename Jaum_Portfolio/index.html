@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaum's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1></h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle">🌙</button></li>
+      </ul>
+    </nav>
+    <section class="intro">
+      <h2>Hi, I'm John Christian</h2>
+      <p>Welcome to my portfolio website!</p>
+    </section>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm a student/developer who loves learning about technology. I fancy exploring web development and building fun, interactive websites. Currently studying second year Bachelor of Science in Information Technology at Holy Name University</p>
+      <img src="images/fb profile pic.jpg" alt="fb profile pic" style="max-width:100%; border-radius:8px;">
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <h3>Assembly</h3>
+        <p>Beginner — I studied low-level programming concepts and basic instruction sets, building a foundational understanding of how code interacts with hardware. Currently revisiting it to refresh my skills.</p>
+        <br>        
+        
+        <h3>Batch Script</h3>
+        <p>Intermediate — I developed a word-guessing game inspired by Phrase Hunter, using string parsing, loops, and conditional logic to simulate game flow in a Windows terminal environment.</p>
+        <br>
+        
+        <h3>C Language</h3>
+        <p>Intermediate — I’ve implemented file I/O and pointer manipulation in a text based, self made console games like “Phrase Hunter,” sharpening my understanding of memory management.</p>
+        <br>
+
+        <h3>HTML & CSS</h3>
+        <p>Intermediate — I craft responsive layouts and animations from scratch, using Flexbox/Grid and CSS variables to ensure consistency across devices.</p>
+        <br>
+
+        <h3>JavaScript</h3>
+        <p>Beginner — I built interactive UIs and single-page app using vanilla JS and DOM APIs and contact number verification using APIs.</p>
+        <!-- Add more if needed -->
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+    
+      <div class="project">
+        <h3>Phrase Hunter (Batch Script)</h3>
+        <p>A text-based word guessing game built with Batch Script, simulating hangman using string parsing and conditional logic in the terminal.</p>
+        <a href="https://github.com/John-Jaum/Phrase-Hunter-in-Batch-Script" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        <div class="screenshot-scroll">
+          <img src="images/phrase-hunter-batch-script-screenshot-1.png" alt="Phrase Hunter in Batch Script screenshot" style="max-width:100%; border-radius:8px;" class="click to enlarge">
+          <img src="images/phrase-hunter-batch-script-screenshot-2.png" alt="Phrase Hunter in Batch Script screenshot" style="max-width:100%; border-radius:8px;" class="click to enlarge">
+          <img src="images/phrase-hunter-batch-script-screenshot-3.png" alt="Phrase Hunter in Batch Script screenshot" style="max-width:100%; border-radius:8px;" class="click to enlarge">
+          <img src="images/phrase-hunter-batch-script-screenshot-4.png" alt="Phrase Hunter in Batch Script screenshot" style="max-width:100%; border-radius:8px;" class="click to enlarge">
+          <img src="images/phrase-hunter-batch-script-screenshot-5.png" alt="Phrase Hunter in Batch Script screenshot" style="max-width:100%; border-radius:8px;" class="click to enlarge">
+        </div>
+      </div>
+    
+      <div class="project">
+        <h3>Phrase Hunter (C Language)</h3>
+        <p>A terminal-based word guessing game built in C that uses arrays, string manipulation, and file handling to manage phrases and game logic without recursion.</p>
+        <a href="https://github.com/John-Jaum/Phrase-Hunter-in-C-Language" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        <div class="screenshot-scroll">
+          <img src="images/phrase-hunter-C-language-screenshot-1.png" alt="Phrase Hunter in C language screenshot" style="max-width:100%; border-radius:8px;" class="click to enlarge">
+          <img src="images/phrase-hunter-C-language-screenshot-2.png" alt="Phrase Hunter in C language screenshot" style="max-width:100%; border-radius:8px;" class="click to enlarge">
+          <img src="images/phrase-hunter-C-language-screenshot-3.png" alt="Phrase Hunter in C language screenshot" style="max-width:100%; border-radius:8px;" class="click to enlarge">
+          <img src="images/phrase-hunter-C-language-screenshot-4.png" alt="Phrase Hunter in C language screenshot" style="max-width:100%; border-radius:8px;" class="click to enlarge">
+          <img src="images/phrase-hunter-C-language-screenshot-5.png" alt="Phrase Hunter in C language screenshot" style="max-width:100%; border-radius:8px;" class="click to enlarge">
+        </div>
+      </div>
+    
+      <!-- Add more projects here -->
+    </section>
+    
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:jjaum@hnu.edu.ph">jjaum@hnu.edu.ph</a></p>
+      <p>GitHub: <a href="https://github.com/John-Jaum" target="_blank">github.com/John-Jaum</a></p>
+
+      <form id="contact-form">
+        <!-- Full Name input -->
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" required />
+        
+        <!-- E-mail input -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <div id="email-error" style="font-size: 14px; margin-top:5px;"></div>
+        
+        <!-- Phone Number input -->
+        <label for="contactNumber">Contact Number</label>
+        <input type="text" id="contact" name="contactNumber" required>
+        <div id="contact-error" style="font-size: 14px; margin-top: 5px;"></div>
+
+        <label for="message">Leave a message</label>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        
+        <button type="submit">Send</button>
+        <p id="form-msg"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 John Christian Jaum</p>
+  </footer>
+
+  <div class="image-overlay" id="imageOverlay">
+    <img src="" alt="Full size image" id="overlayImage">
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

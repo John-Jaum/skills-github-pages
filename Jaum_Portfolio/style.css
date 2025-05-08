@@ -1,0 +1,246 @@
+:root {
+  --main-bg: #ffffff;
+  --text-color: #333333;
+  --accent: #f4a261; /* Soft orange */
+  --accent-dark: #e76f51;
+  --header-bg: #fef6f0;
+  --form-bg: #fff;
+  --dark-bg: #1e1e1e;
+  --dark-text: #eeeeee;
+  --project-bg: #fff5ee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 20px;
+}
+header {
+  background-color: var(--header-bg);
+  padding: 20px;
+  border-radius: 10px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav h1 {
+  color: var(--accent-dark);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+nav ul li a,
+nav ul li button {
+  text-decoration: none;
+  color: var(--accent-dark);
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+nav ul li a:hover,
+nav ul li button:hover {
+  color: var(--accent);
+}
+.intro {
+  margin-top: 20px;
+  text-align: center;
+}
+.intro h2 {
+  color: var(--accent-dark);
+}
+section {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 20px;
+  text-align: center; /* Centers text inside the section */
+}
+h2 {
+  border-left: 5px solid var(--accent);
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+ul {
+  list-style: disc inside;
+  text-align: left; /* Align list items to the left */
+  margin: 0 auto; /* Center the list in the section */
+  max-width: 500px;
+  padding: 0;
+}
+a {
+  color: var(--accent-dark);
+}
+a:hover {
+  text-decoration: underline;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  background: var(--form-bg);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 0 auto; /* Horizontally center the form */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left; /* Keep input labels and text left-aligned */
+}
+form input,
+form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+form button {
+  background-color: var(--accent-dark);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+form button:hover {
+  background-color: var(--accent);
+}
+#form-msg {
+  margin-top: 10px;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+}
+
+/* Dark mode toggle */
+.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+.dark-mode header {
+  background-color: #292929;
+}
+
+.dark-mode .project {
+  background-color: #292929;
+}
+.dark-mode a {
+  color: #f4a261;
+}
+.dark-mode form {
+  background-color: #2a2a2a;
+}
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #3a3a3a;
+  color: #fff;
+  border: 1px solid #555;
+}
+.dark-mode button {
+  background-color: #f4a261;
+  color: #000;
+}
+
+/* Responsive nav */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+
+#projects {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.project {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  /* background-color: #fff5ee; */
+  background-color: var(--project-bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.project h3 {
+  color: var(--accent-dark);
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-weight: bold;
+}
+.project a:hover {
+  text-decoration: underline;
+}
+
+
+.screenshot-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.screenshot-scroll img {
+  max-height: 200px;
+  border-radius: 8px;
+  flex-shrink: 0; /* Prevents images from shrinking */
+}
+
+
+.screenshot-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* Fullscreen overlay */
+.image-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+}
+
+.image-overlay.active {
+  display: flex;
+}
